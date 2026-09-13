@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Darussalam Audio - Jasa penyewaan sound system profesional untuk berbagai kebutuhan acara MASISIR.">
+<title>Unit Usaha Milik IKPM (DARUSSALAM AUDIO)</title>
+
+<style>
+:root{
+    --primary:#dadd82;
+    --primary-dark:#0728fd;
+    --dark:#090909;
+    --dark2:#111;
+    --card:#171717;
+    --text:#fff;
+    --muted:#aaa;
+    --green:#25D366;
+    --border:rgba(255,255,255,.08);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--dark);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit}
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(80, 47, 199, 0.9);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    color:var(--primary);
+}
+
+.logo span{
+    color:#fff;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{color:var(--primary)}
+
+.menu-btn{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:72px;
+    background:
+    radial-gradient(circle at 80% 30%,rgba(181, 227, 14, 0.18),transparent 30%),
+    radial-gradient(circle at 20% 80%,rgba(14, 91, 234, 0.08),transparent 30%);
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgb(193, 197, 210);
+    background:rgba(99, 143, 183, 0.08);
+    color:var(--primary);
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,76px);
+    line-height:1;
+    margin-bottom:24px;
+}
+
+.hero h1 span{color:var(--primary)}
+
+.hero p{
+    color:#bbb;
+    max-width:620px;
+    font-size:17px;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 22px;
+    border-radius:10px;
+    font-weight:bold;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:#000000;
+}
+
+.btn-primary:hover{
+    background:#e7e5ed;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border-color:#333;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    border-color:var(--primary);
+    color:var(--primary);
+}
+
+/* SECTION */
+section{padding:90px 0}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title small{
+    color:var(--primary);
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin:8px 0;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+/* PACKAGES */
+.packages{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.package{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:28px;
+    position:relative;
+    transition:.3s;
+}
+
+.package:hover{
+    transform:translateY(-6px);
+    border-color:rgba(0, 114, 245, 0.5);
+}
+
+.package.popular{
+    border:1px solid var(--primary);
+}
+
+.popular-label{
+    position:absolute;
+    top:-13px;
+    right:20px;
+    background:var(--primary);
+    color:#000;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.package h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.price{
+    font-size:30px;
+    font-weight:900;
+    color:var(--primary);
+    margin:15px 0;
+}
+
+.price small{
+    font-size:13px;
+    color:#888;
+    font-weight:normal;
+}
+
+.package ul{
+    list-style:none;
+    margin:20px 0;
+}
+
+.package li{
+    padding:7px 0;
+    color:#ccc;
+    font-size:14px;
+}
+
+.package li::before{
+    content:"✓";
+    color:var(--primary);
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.feature{
+    padding:25px;
+    background:#121212;
+    border:1px solid var(--border);
+    border-radius:15px;
+}
+
+.icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.feature h3{margin-bottom:6px}
+
+.feature p{
+    color:#999;
+    font-size:14px;
+}
+
+/* SOP SLIDER */
+.sop-wrapper{
+    position:relative;
+    max-width:850px;
+    margin:auto;
+}
+
+.sop-slider{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.sop-track{
+    display:flex;
+    transition:transform .5s ease;
+}
+
+.sop-slide{
+    min-width:100%;
+    background:linear-gradient(145deg,#181818,#0d0d0d);
+    border:1px solid var(--border);
+    padding:40px;
+    min-height:300px;
+}
+
+.step-number{
+    color:var(--primary);
+    font-size:14px;
+    font-weight:bold;
+}
+
+.sop-slide h3{
+    font-size:27px;
+    margin:10px 0;
+}
+
+.sop-slide p{
+    color:#aaa;
+    max-width:650px;
+}
+
+.sop-controls{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+.sop-controls button{
+    width:42px;
+    height:42px;
+    border:1px solid #333;
+    background:#151515;
+    color:#fff;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.sop-controls button:hover{
+    background:var(--primary);
+    color:#000;
+}
+
+/* FAQ */
+.faq{
+    max-width:800px;
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid #292929;
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:0;
+    color:#fff;
+    text-align:left;
+    padding:20px 0;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.3s;
+    color:#999;
+}
+
+.faq-item.active .faq-answer{
+    max-height:200px;
+    padding-bottom:20px;
+}
+
+/* CTA */
+.cta{
+    background:linear-gradient(135deg,#171717,#0d0d0d);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:55px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#999;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid var(--border);
+    padding:35px 0;
+    color:#777;
+    font-size:13px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(37,211,102,.35);
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .nav-links{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#0c0c0c;
+        flex-direction:column;
+        padding:20px;
+        display:none;
+    }
+
+    .nav-links.active{display:flex}
+
+    .menu-btn{display:block}
+
+    .packages{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .sop-slide{
+        padding:28px;
+    }
+
+    .cta{
+        padding:35px 20px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:480px){
+    .features{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="container navbar">
+
+    <a href="#" class="logo">
+        DARUSSALAM <span>AUDIO</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#paket">Paket</a></li>
+        <li><a href="#keunggulan">Keunggulan</a></li>
+        <li><a href="#sop">SOP</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+
+    <div class="hero-content">
+
+        <span class="badge">Unit Usaha Milik IKPM</span>
+
+        <h1>
+            Suara Lebih <span>Maksimal.</span><br>
+            Acara Lebih Berkesan.
+        </h1>
+
+        <p>
+            Darussalam Audio merupakan cabang unit usaha milik IKPM (CAIRO) menyediakan layanan penyewaan sound system
+            untuk berbagai kebutuhan acara di kalangan masisir, dengan perangkat berkualitas
+            dan pelayanan profesional.
+        </p>
+
+        <div class="buttons">
+            <a href="#paket" class="btn btn-primary">
+                Lihat Paket
+            </a>
+
+            <a href="#" onclick="orderWA('Konsultasi Sound System')" class="btn btn-outline">
+                Konsultasi via WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- PAKET -->
+<section id="paket">
+<div class="container">
+
+    <div class="section-title">
+        <small>PILIHAN PAKET</small>
+        <h2>Paket Sound System</h2>
+        <p>Pilih paket sesuai kebutuhan acara Antum.</p>
+    </div>
+
+    <div class="packages">
+
+        <!-- PAKET 1 -->
+        <div class="package">
+
+            <h3>Paket Basic</h3>
+            <p style="color:#888">Untuk acara kecil</p>
+
+            <div class="price">
+                Rp 750K <small>/ event</small>
+            </div>
+
+            <ul>
+                <li>2 Speaker aktif</li>
+                <li>1 Mixer audio</li>
+                <li>2 Microphone</li>
+                <li>Stand speaker</li>
+                <li>Operator</li>
+            </ul>
+
+            <button class="btn btn-primary"
+                onclick="orderWA('Paket Basic - Rp 750K')">
+                Pesan Paket
+            </button>
+
+        </div>
+
+
+        <!-- PAKET 2 -->
+        <div class="package popular">
+
+            <span class="popular-label">PALING POPULER</span>
+
+            <h3>Paket Pro</h3>
+            <p style="color:#888">Untuk acara menengah</p>
+
+            <div class="price">
+                Rp 1.500K <small>/ event</small>
+            </div>
+
+            <ul>
+                <li>4 Speaker aktif</li>
+                <li>Subwoofer</li>
+                <li>Mixer audio</li>
+                <li>4 Microphone</li>
+                <li>Operator profesional</li>
+            </ul>
+
+            <button class="btn btn-primary"
+                onclick="orderWA('Paket Pro - Rp 1.500K')">
+                Pesan Paket
+            </button>
+
+        </div>
+
+
+        <!-- PAKET 3 -->
+        <div class="package">
+
+            <h3>Paket Premium</h3>
+            <p style="color:#888">Untuk acara besar</p>
+
+            <div class="price">
+                Rp 3.000K <small>/ event</small>
+            </div>
+
+            <ul>
+                <li>Sound system lengkap</li>
+                <li>Multiple subwoofer</li>
+                <li>Digital mixer</li>
+                <li>Wireless microphone</li>
+                <li>Operator & crew</li>
+            </ul>
+
+            <button class="btn btn-primary"
+                onclick="orderWA('Paket Premium - Rp 3.000K')">
+                Pesan Paket
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- KEUNGGULAN -->
+<section id="keunggulan">
+<div class="container">
+
+    <div class="section-title">
+        <small>KENAPA KAMI?</small>
+        <h2>Darussalam Audio</h2>
+        <p>Solusi sound system untuk berbagai kebutuhan acara.</p>
+    </div>
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="icon">🔊</div>
+            <h3>Audio Berkualitas</h3>
+            <p>Perangkat sound system dirawat dan siap digunakan.</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🎛️</div>
+            <h3>Operator</h3>
+            <p>Didukung operator untuk membantu mengatur audio acara.</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🚚</div>
+            <h3>Pengiriman</h3>
+            <p>Tim siap membantu proses pengantaran dan pemasangan.</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">⚡</div>
+            <h3>Siap Acara</h3>
+            <p>Setup dilakukan sebelum acara agar lebih siap digunakan.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- SOP SLIDER -->
+<section id="sop">
+<div class="container">
+
+    <div class="section-title">
+        <small>SOP PEMINJAMAN</small>
+        <h2>Alur Penyewaan</h2>
+        <p>Silakan baca prosedur sebelum melakukan pemesanan.</p>
+    </div>
+
+    <div class="sop-wrapper">
+
+        <div class="sop-slider">
+
+            <div class="sop-track" id="sopTrack">
+
+                <!--
+                ==================================================
+                EDIT SOP DI BAGIAN INI
+                ==================================================
+                -->
+
+                <div class="sop-slide">
+                    <span class="step-number">STEP 01</span>
+                    <h3>Hubungi Admin</h3>
+                    <p>
+                        Hubungi admin Darussalam Audio melalui WhatsApp
+                        untuk menanyakan ketersediaan paket dan tanggal acara.
+                    </p>
+                </div>
+
+                <div class="sop-slide">
+                    <span class="step-number">STEP 02</span>
+                    <h3>Pilih Paket</h3>
+                    <p>
+                        Tentukan paket sound system sesuai kebutuhan acara.
+                        Admin akan membantu memberikan rekomendasi.
+                    </p>
+                </div>
+
+                <div class="sop-slide">
+                    <span class="step-number">STEP 03</span>
+                    <h3>Konfirmasi Booking</h3>
+                    <p>
+                        Setelah harga dan kebutuhan disepakati,
+                        lakukan konfirmasi booking kepada admin.
+                    </p>
+                </div>
+
+                <div class="sop-slide">
+                    <span class="step-number">STEP 04</span>
+                    <h3>Pembayaran</h3>
+                    <p>
+                        Pembayaran DP atau pelunasan mengikuti ketentuan
+                        yang diberikan oleh admin Darussalam Audio.
+                    </p>
+                </div>
+
+                <div class="sop-slide">
+                    <span class="step-number">STEP 05</span>
+                    <h3>Setup Acara</h3>
+                    <p>
+                        Tim Darussalam Audio melakukan persiapan dan
+                        pemasangan sound system sesuai kesepakatan.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sop-controls">
+            <button onclick="prevSOP()">‹</button>
+            <button onclick="nextSOP()">›</button>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq">
+<div class="container">
+
+    <div class="section-title">
+        <small>FAQ</small>
+        <h2>Pertanyaan Umum</h2>
+    </div>
+
+    <div class="faq">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Apakah bisa request paket?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Bisa. Paket dapat disesuaikan dengan kebutuhan dan kondisi acara.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Apakah tersedia operator?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Tersedia. Operator dapat disertakan sesuai paket atau kebutuhan acara.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Bagaimana cara booking?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Pilih paket kemudian klik tombol pesan untuk langsung menghubungi admin melalui WhatsApp.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Apakah bisa konsultasi terlebih dahulu?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Tentu. Silakan hubungi admin untuk konsultasi kebutuhan sound system Anda.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+<section id="kontak">
+<div class="container">
+
+    <div class="cta">
+
+        <h2>Butuh Sound System?</h2>
+
+        <p>
+            Konsultasikan kebutuhan acara Anda bersama
+            Darussalam Audio.
+        </p>
+
+        <a href="#" onclick="orderWA('Saya ingin konsultasi sound system')" class="btn btn-primary">
+            💬 Chat Admin WhatsApp
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+<div class="container footer-content">
+
+    <div>
+        © 2026 <strong>Darussalam Audio</strong>. All rights reserved.
+    </div>
+
+    <div>
+        Sound System Rental • Professional Audio
+    </div>
+
+</div>
+</footer>
+
+
+<!-- FLOATING WA -->
+<a href="#" onclick="orderWA('Halo Darussalam Audio, saya ingin bertanya tentang penyewaan sound system.')" class="whatsapp">
+    ☎
+</a>
+
+
+<script>
+
+/* ==========================================
+   NOMOR WHATSAPP ADMIN
+   GANTI ANGKA DI BAWAH
+   FORMAT: 628xxxxxxxxxx
+   JANGAN PAKAI +, SPASI, ATAU 0 DI DEPAN
+========================================== */
+
+const ADMIN_WA = "6281234567890";
+
+
+/* WHATSAPP AUTO MESSAGE */
+
+function orderWA(pesan){
+
+    const text =
+    pesan +
+    "\n\nHalo Darussalam Audio, saya ingin mendapatkan informasi lebih lanjut.";
+
+    const url =
+    "https://wa.me/" +
+    ADMIN_WA +
+    "?text=" +
+    encodeURIComponent(text);
+
+    window.open(url,"_blank");
+}
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* SOP SLIDER */
+
+let currentSOP = 0;
+
+const track =
+document.getElementById("sopTrack");
+
+const totalSOP =
+track.children.length;
+
+function showSOP(){
+
+    track.style.transform =
+    `translateX(-${currentSOP * 100}%)`;
+
+}
+
+function nextSOP(){
+
+    currentSOP++;
+
+    if(currentSOP >= totalSOP){
+        currentSOP = 0;
+    }
+
+    showSOP();
+
+}
+
+function prevSOP(){
+
+    currentSOP--;
+
+    if(currentSOP < 0){
+        currentSOP = totalSOP - 1;
+    }
+
+    showSOP();
+
+}
+
+
+/* AUTO SLIDER */
+
+setInterval(nextSOP,5000);
+
+
+/* FAQ */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(button => {
+
+    button.addEventListener("click",()=>{
+
+        const item =
+        button.parentElement;
+
+        item.classList.toggle("active");
+
+        const symbol =
+        button.querySelector("span");
+
+        symbol.textContent =
+        item.classList.contains("active")
+        ? "−"
+        : "+";
+
+    });
+
+});
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+    link.addEventListener("click",()=>{
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
